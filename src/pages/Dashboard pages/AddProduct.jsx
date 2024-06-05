@@ -34,7 +34,7 @@ const AddProduct = () => {
       price: price,
       img_url: img_url,
     };
-    await fetch("http://localhost:3000/products", {
+    await fetch("https://pedal-pals-backend.vercel.app/products", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

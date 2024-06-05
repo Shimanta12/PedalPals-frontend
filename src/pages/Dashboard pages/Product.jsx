@@ -8,7 +8,7 @@ const Product = ({ product, onDelete }) => {
   const { brand, frame_material, name, price, _id, img_url } = product;
 
   const handleDelete = () => {
-    fetch(`http://localhost:3000/products/${_id}`, {
+    fetch(`https://pedal-pals-backend.vercel.app/products/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

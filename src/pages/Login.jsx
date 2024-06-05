@@ -25,7 +25,7 @@ const Login = () => {
 
   useEffect(() => {
     if (user) {
-      fetch("http://localhost:3000/users", {
+      fetch("https://pedal-pals-backend.vercel.app/users", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

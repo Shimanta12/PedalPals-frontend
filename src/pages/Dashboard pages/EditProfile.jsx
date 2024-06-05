@@ -14,7 +14,7 @@ const EditProfile = () => {
   const notify = (message) => toast(message);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/users/${user?.email}`)
+    fetch(`https://pedal-pals-backend.vercel.app/users/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setUserInfo(data));
   }, [user, userInfo]);
@@ -40,14 +40,17 @@ const EditProfile = () => {
       userInfo["city"] = city;
     }
     if (userInfo) {
-      await fetch(`http://localhost:3000/users/${user?.email}`, {
-        method: "PATCH",
-        headers: {
-          "Content-type": "application/json",
-          authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify(userInfo),
-      })
+      await fetch(
+        `https://pedal-pals-backend.vercel.app/users/${user?.email}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-type": "application/json",
+            authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(userInfo),
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           console.log(data);

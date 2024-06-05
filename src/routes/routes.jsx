@@ -47,7 +47,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/products/${params.id}`),
+          fetch(`https://pedal-pals-backend.vercel.app/products/${params.id}`),
       },
       {
         path: "login",
@@ -104,7 +104,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/products/${params.id}`),
+          fetch(`https://pedal-pals-backend.vercel.app/products/${params.id}`),
       },
       {
         path: "all-products/update-product/:id",
@@ -114,7 +114,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/products/${params.id}`),
+          fetch(`https://pedal-pals-backend.vercel.app/products/${params.id}`),
       },
       {
         path: "add-product",

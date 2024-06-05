@@ -9,7 +9,7 @@ const AllProducts = () => {
   const notify = (message) => toast(message);
 
   useEffect(() => {
-    fetch("http://localhost:3000/products")
+    fetch("https://pedal-pals-backend.vercel.app/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
