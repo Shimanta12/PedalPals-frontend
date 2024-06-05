@@ -33,7 +33,7 @@ Welcome to the README file for the PedalPals. This document provides an overview
 
 ## Live Website
 
-[]
+[https://pedal-pals-frontend.vercel.app/]
 
 ## Getting Started
 
